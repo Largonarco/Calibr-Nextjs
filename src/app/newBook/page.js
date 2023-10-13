@@ -22,7 +22,7 @@ export default function NewBook() {
 	};
 
 	const addBook = async () => {
-		await fetch("http://localhost:5000/books", {
+		await fetch("https://charming-dungarees-foal.cyclic.app/books", {
 			method: "POST",
 			body: JSON.stringify(book),
 			headers: {

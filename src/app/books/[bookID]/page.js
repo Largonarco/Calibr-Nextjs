@@ -15,7 +15,7 @@ export default function Book({ params }) {
 	};
 
 	const fetchBookData = async () => {
-		let res = await fetch(`http://localhost:5000/books/${params.bookID}`);
+		let res = await fetch(`https://charming-dungarees-foal.cyclic.app/books/${params.bookID}`);
 		res = await res.json();
 
 		setBook(res.book);
@@ -24,7 +24,7 @@ export default function Book({ params }) {
 	const updateBook = async () => {
 		const { _id, ...actualBook } = book;
 
-		await fetch(`http://localhost:5000/books/${_id}`, {
+		await fetch(`https://charming-dungarees-foal.cyclic.app/books/${_id}`, {
 			method: "PUT",
 			body: JSON.stringify(actualBook),
 			headers: {
@@ -35,7 +35,7 @@ export default function Book({ params }) {
 	};
 
 	const deleteBook = async () => {
-		await fetch(`http://localhost:5000/books/${book._id}`, {
+		await fetch(`https://charming-dungarees-foal.cyclic.app/books/${book._id}`, {
 			method: "DELETE",
 		});
 	};

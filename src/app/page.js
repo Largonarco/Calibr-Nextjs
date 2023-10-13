@@ -9,7 +9,7 @@ export default function Home() {
 	const [bookCount, setBookCount] = useState(0);
 
 	const fetchBooks = async () => {
-		let res = await fetch(`http://localhost:5000/books?offset=${page * 5}&limit=5`);
+		let res = await fetch(`https://charming-dungarees-foal.cyclic.app/books?offset=${page * 5}&limit=5`);
 		res = await res.json();
 
 		setBooks(res.books);

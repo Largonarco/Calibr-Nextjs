@@ -10,7 +10,7 @@ export default function Search() {
 	const onInputChange = async (e) => {
 		setQuery(e.target.value);
 
-		let res = await fetch(`http://localhost:5000/search?query=${query}`);
+		let res = await fetch(`https://charming-dungarees-foal.cyclic.app/search?query=${query}`);
 		res = await res.json();
 
 		setResults(res.results.hits.hits);
